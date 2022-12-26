@@ -1,43 +1,31 @@
 #include<stdio.h>
+#include<string.h>
 
-int main(){
-    int m;
-    int n;
-    printf("enter the order of a");
-    scanf ("%d %d",&n,&m);
-printf("enter the elements");
-    int a[n][m];
-    for (int i=0;i<m;i++){
-        for (int j=0;j<n;j++){
-            scanf("%d",&a[i][j]);
-        }
-    }
-    int p,q;
-    printf("enter the order of b");
+void main()
+{
+    int i,j,k=0;
+    printf("Enter string ");
+    char str[10];
+    gets(str);
+    int n=strlen(str);
+    
 
-    scanf("%d %d",&p,&q);
-    int b[p][q];
-    printf("enter the elements of b");
-    for (int i=0;i<m;i++){
-        for (int j=0;j<n;j++){
-            scanf("%d",&b[i][j]);
-        }
-    }
-    int c[m][q];
-    int k=0;
-    for (int i=0;i<m;i++){
-        for (int j=0;j<n;j++){
-        c[i][j]=0;
-        for (int k=0;k<n;k++){
-            c[i][j]+=a[i][k]*b[k][j];
-        }
-        }
-    }
-    for (int i=0;i<m;i++){
-        for (int j=0;j<q;j++){
-            printf("%d ",c[i][j]);            
-        }
         printf("\n");
+    for ( i = 1 ;i<=n;i++)
+    {
+       for (j=1; j <i; j++)
+       {
+        printf(".");
+        
+       }
+       for (int j=i-1;j<n;j++)
+       {
+        printf("%c",str[j]);
+       }
+
+       printf("\n");
+       
+       
     }
-    return 0;
+
 }

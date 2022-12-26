@@ -1,45 +1,24 @@
 #include<stdio.h>
 
 int main(){
-    int arr1[]={4,5,6};
-    int arr2[]={2,3,7,8,9,10};
-    int i=0,j=0;
-    
-    int n1=sizeof(arr1)/4;
-    int n2=sizeof(arr2)/4;
-    int c[n1+n2];
-    int k=0;
-    while(i<n1 &&j<n2){
-        if (arr1[i]>arr2[j]){
-           c[k++]=arr2[j++];
-            j++;
+    for (int i=1;i<=3;i++){
+        for (int j=i;j<3;j++){
+            printf(" ");
         }
-        if (arr1[i]<arr2[j]){
-            c[k++]=arr1[i];
-            i++;
-
+        for (int j=1;j<=2*i-1;j++){
+            printf("*");
         }
-        if (arr1[i]==arr2[j]){
-            c[k++]=arr1[i];
-            j++;
-            i++;
+        printf("\n");
+    }
+    for (int i=1;i<3;i++){
+        for (int j=1;j<=i;j++){
+            printf(" ");
         }
+        for (int j=1;j<=5-2*i;j++){
+            printf("*");
+        }
+        printf("\n");
 
     }
-    while(i<n1){
-        c[k++]=arr1[i];
-        i++;
-    }
-    while (j<n2){
-        c[k++]=arr2[j];
-        j++;
-    }
-    for (int i=0;i<k;i++){
-        printf("%d",c[i]);
-        
-    }
-    
-    
-
     return 0;
 }

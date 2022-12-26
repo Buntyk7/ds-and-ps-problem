@@ -1,23 +1,16 @@
 #include<stdio.h>
-
 int main(){
-    printf("enter the temprature in centigrade");
-    float temp;
-    scanf("%f",&temp);
-    if (temp <0){
-        printf("freezing water");
-
-    }else if(temp >=0 && temp<10){
-        printf("very cold weather");
-    }else if( 10<=temp && temp<20){
-        printf("cold weather");
-    }else if( 20<=temp && temp<30){
-        printf("Normal temprature");
-    }else if( 30<=temp && temp<40){
-        printf("Its hot");
-    }else if( temp>=40){
-        printf("Its very hot");
+    int n=5;
+    for (int i=1;i<=n;i++){
+        for(int j=n;j>i;j--){
+            printf(" ");
+        }
+        for (int j=i;j>=1;j--){
+            printf("%d",j);
+        }
+        for (int j=2;j<=i;j++){
+            printf("%d",j);
+        }
+        printf("\n");
     }
-    
-    return 0;
 }

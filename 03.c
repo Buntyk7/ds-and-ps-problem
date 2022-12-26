@@ -1,12 +1,12 @@
 #include<stdio.h>
 
 int main(){
-    char ch;
-    scanf("%c",&ch);
-    if (ch=='a' || ch=='e' || ch=='i'||ch=='o'||ch=='u'){
-        printf("%c is vowel",ch);
-    }else{
-        printf("%c is conosant",ch);
+    char  ch='A';
+    for (int i=0;i<3;i++){
+        for (int j=0;j<=i;j++){
+            printf("%c",ch+i);
+        }
+        printf("\n");
     }
     return 0;
 }

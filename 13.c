@@ -1,19 +1,15 @@
 #include<stdio.h>
-
+void sub(int n){
+    printf("%d ",n);
+        if (n<=0){
+            return;
+        }
+    sub(n-5);
+    printf("%d ",n);
+}
 int main(){
-    int n;
-    scanf("%d",&n);
-    int a[n];
-    printf("enter the elements of array");
-    for (int i=0;i<n;i++){
-        scanf("%d",&a[i]);
-    }
-    int i;
-    printf("enter the element idx");
-    scanf("%d",&i);
-    int *b=&a[0];
-    printf("%d",*b);
-    long add=*b+sizeof(a[0])*(i);
-    printf("%d",add);
+    int n=16;
+    sub(n);
     return 0;
 }
+
