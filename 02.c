@@ -1,25 +1,35 @@
 #include<stdio.h>
-void print(int arr[],int n){
-    for (int i=0;i<n;i++){
-        printf("%d",arr[i]);
-    }
-}
-int main(){
-    int a[]={3,2,4,6,1};
-    int len=5;
-    int temp;
-    for (int i=0;i<len;i++){
-        int minpos=i;
-        for (int j=i+1;j<len;j++){
-            if (a[minpos]>a[j]){
-                minpos=j;
-            }
-        temp=a[i];
-        a[i]=a[minpos];
-        a[minpos]=temp;
 
+int main(){
+    printf("enter the three num.");
+    int a,b,c;
+    scanf("%d %d %d",&a ,&b, &c);
+    if (a>b){
+        if(a>c){
+            printf("a is greatest %d",a);
+        }else{
+            printf("c is greatest %d",c);
         }
     }
-    print(a,len);
+    else if(a<b){
+        if(b>c){
+            printf("b is greatest %d",b);
+        }
+        else{
+            printf("c is greatest %d",c);
+        }
+
+
+    }
     return 0;
 }
+
+//5,3,6
+//if (a>b && a>c){
+//     return a;
+// }else if(b>c){
+//     return b;
+
+// }else{
+//     return c;
+// }
