@@ -1,39 +1,34 @@
 #include<stdio.h>
-int ternerysearch(int a[],int key,int n){
-   int si=0,ei=n-1;
-    while(si<=ei){
-        int mid1=si+(ei-si)/3;
-        int mid2=ei-(ei-si)/3;
-        if(key==a[mid1] ){
-            return mid1;
-
-        }else if ( key==a[mid2]){
-            return mid2;
-        }
-        if(key<a[mid1]){
-            ei=mid1-1;
-        }else if(key>a[mid2]){
-            si=mid2+1;
-        }else{
-            si=mid1+1;
-            ei=mid2-1;
+ void insertionsort(int a[],int n){
+        for(int i=0;i<n;i++){
+            int curr=a[i];
+            int prev=i-1;
+            while(prev>=0  && curr<a[prev]){
+                
+            }
         }
     }
-    return -1;
-}
 int main(){
-    int n,key;
-    printf("enter the size of array");
-    scanf("%d",&n);
-    printf("enter the key");
-    scanf("%d",&key);
-    int x[n];
-    
-    printf("enter the elements");
-    for (int i=0;i<n;i++){
-        scanf("%d",&x[i]);
-    }
-    printf("%d is idx",ternerysearch(x,key,n));
 
+   
+    int arr[]={3,2,1,4,5,9,5};
+
+
+    int n=sizeof(arr)/sizeof(arr[0]);
+    for (int i=0;i<n;i++){
+        int l=i;
+        for(int j=i+1;j>0;j--){
+            if(arr[l]>arr[j]){
+                int temp=arr[l];
+                arr[l]=arr[j];
+                arr[j]=temp;
+                
+            }
+            l--;
+        }
+    }
+    for(int i=0;i<n;i++){
+        printf("%d",arr[i]);
+    }
     return 0;
 }
